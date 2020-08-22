@@ -1,3 +1,5 @@
+//프로젝트의 중심, 핵심적인 서버 역할, 미들웨어 관리,라우팅의 시작점
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -5,8 +7,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index'); //routes/index로 가기
-var usersRouter = require('./routes/users');
-
 var app = express();
 
 // view engine setup
@@ -20,7 +20,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter); //7번으로 가고
-app.use('/users', usersRouter); 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -39,3 +38,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+//module.exports = router;

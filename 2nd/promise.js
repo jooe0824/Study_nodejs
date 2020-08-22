@@ -64,4 +64,4 @@ promise
     .then(console.log);
 
 /* 홀수 번호가 붙은 함수는 resolved return 작업 성공적으로 완료
-짝수 번호가 붙은 함수는 rejected return, 오류 냄
+짝수 번호가 붙은 함수는 rejected return, 오류 냄 */
