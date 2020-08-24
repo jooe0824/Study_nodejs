@@ -133,7 +133,7 @@ router.post('/signin', async (req, res) => {
 
 router.get('/profile/:id', async (req, res) => {
     const id = req.params.id;
-    const user = user.filter(user => user.id == id)[0]; 
+    const user = UserModel.filter(user => user.id == id)[0]; //useModel 로 적어야한다!!! user 로 적어서 계속 오류 났었음. 확인 필수########
     // request params 에서 데이터 가져오기
     
     if (user == undefined){ 
@@ -150,6 +150,8 @@ router.get('/profile/:id', async (req, res) => {
     }
     //pwd 제외하고 가져오기
 
+    console.log(profile);
+    
     res.status(statusCode.OK)
         .send(util.success(statusCode.OK, resMessage.LOGIN_SUCCESS, profile)
             );

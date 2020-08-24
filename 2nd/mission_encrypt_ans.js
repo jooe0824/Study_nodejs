@@ -17,7 +17,7 @@ fs.readFile(`${__dirname}/password.txt`, async (err, data) => {
 
     const password = data.toString();  
     /*#########질문!#########
-    여기서 data의 의미는 뭔가?
+    여기서 data의 의미는 뭔가? txt file 내에 있는 data 를 말한다.
     */
 
     const salt = crypto.randomBytes(32).toString('hex');
