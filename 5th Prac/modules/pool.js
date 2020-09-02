@@ -1,5 +1,11 @@
-const poolPromise = require('../config/database');
+/* 미리 설정해놓아야 하는 것 
+config/database.js 
+modules/pool.js 생성 
+MySQL - user Table
+5차 세미나에서 배운 pool , 
+*/
 
+const poolPromise = require('../config/database');
 module.exports = { 
     queryParam: async (query) => {
         return new Promise ( async (resolve, reject) => {
